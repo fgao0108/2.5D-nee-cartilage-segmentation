@@ -188,7 +188,8 @@ mask_dir_512 = "/data_vault/hexai/OAICartilage/cropped_annotations_numpy"
 batch_size = 8  
 
 test_ds_512 = KneeSegmentation25D(image_dir_512, mask_dir_512, test_f, test_transform, label_transform)
-test_loader_512 = DataLoader(test_ds_512, batch_size=batch_size, shuffle=False, num_workers=4, drop_last=True)
+test_loader_512 = DataLoader(test_ds_512, batch_size=batch_size, shuffle=False, num_workers=4, drop_last=False)
+
 
 print(f"Loaded test_loader_512 with {len(test_ds_512)} samples.")
 
