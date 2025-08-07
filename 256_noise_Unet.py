@@ -119,8 +119,8 @@ val_ds = KneeSegmentation25D(image_dir, mask_dir, val_f, train_val_transform, la
 test_ds = KneeSegmentation25D(image_dir, mask_dir, test_f, test_transform, label_transform)
 
 train_loader = DataLoader(train_ds, batch_size=8, shuffle=True, num_workers=4, drop_last=True)
-val_loader = DataLoader(val_ds, batch_size=8, num_workers=4, drop_last=True)
-test_loader = DataLoader(test_ds, batch_size=8, shuffle=False, num_workers=4, drop_last=True)
+val_loader = DataLoader(val_ds, batch_size=8, shuffle=False, num_workers=4, drop_last=False)
+test_loader = DataLoader(test_ds, batch_size=8, shuffle=False, num_workers=4, drop_last=False)
 
 
 # Save split to a pickle file
